@@ -1,0 +1,48 @@
+
+{ 
+    BasedOnStyle: LLVM,
+    Language: Cpp,
+    IndentWidth: 4,
+    ColumnLimit: 150,
+    PointerAlignment: Middle,
+    
+    AllowShortFunctionsOnASingleLine: false,
+    AllowShortIfStatementsOnASingleLine: false,
+    AllowShortBlocksOnASingleLine: false,   
+
+    AlignConsecutiveMacros: true, 
+    AlignConsecutiveDeclarations: true,
+    AlignConsecutiveAssignments: true,
+    
+    IndentPPDirectives: AfterHash,
+
+    Cpp11BracedListStyle: false,
+    SpaceBeforeCpp11BracedList: true,    
+    SpaceAfterCStyleCast: true,   
+    
+    IndentCaseLabels: true,
+    
+    AlignEscapedNewlines: Left,
+    SortIncludes: false,    
+    BinPackArguments: false,
+    BinPackParameters: false,
+    AlignAfterOpenBracket: Align,    
+    AllowAllArgumentsOnNextLine: false,
+    
+    BreakBeforeBraces: Custom,
+    BraceWrapping:
+    {        
+        AfterEnum: true,
+        AfterStruct: true,
+        AfterFunction: true,
+        AfterUnion: true,
+        AfterExternBlock: true,        
+        AfterControlStatement: true,
+        AfterCaseLabel: true,        
+        BeforeElse: true,        
+        IndentBraces: false,
+        SplitEmptyFunction: false,
+        SplitEmptyRecord: false,        
+    },
+    
+}
