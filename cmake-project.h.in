@@ -9,8 +9,16 @@
  *
  */
 
+
+#ifndef CMAKE_PROJECT_H
+#define CMAKE_PROJECT_H
+
 // the configured options and settings
 
 #define PROJECT_VERSION_MAJOR @cmake_project_VERSION_MAJOR@
 #define PROJECT_VERSION_MINOR @cmake_project_VERSION_MINOR@
 #define PROJECT_VERSION_PATCH @cmake_project_VERSION_PATCH@
+
+#define PROJECT_VERSION_STR "@cmake_project_VERSION_MAJOR@.@cmake_project_VERSION_MINOR@.@cmake_project_VERSION_PATCH@"
+
+#endif // CMAKE_PROJECT_H

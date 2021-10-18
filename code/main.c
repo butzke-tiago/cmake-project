@@ -12,7 +12,19 @@
 /* System includes */
 #include <stdio.h>
 
+#include "cmake-project.h"
+
+/* Modules includes */
+#include "summation.h"
+#include "product.h"
+
 int main(int argc, char * argv[])
 {
-    printf("CMake Project\n");
+    printf("CMake Project v%s\n", PROJECT_VERSION_STR);
+
+    printf("A summation of 1 and 2: %d\n", summation(2, 1, 2));
+    printf("A summation of 1, 2, 3, 4: %d\n", summation(4, 1, 2, 3, 4));
+
+    printf("A product of 1 and 2: %d\n", product(2, 1, 2));
+    printf("A product of 1, 2, 3, 4: %d\n", product(4, 1, 2, 3, 4));
 }
