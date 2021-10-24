@@ -21,4 +21,6 @@
 
 #define PROJECT_VERSION_STR "@cmake_project_VERSION_MAJOR@.@cmake_project_VERSION_MINOR@.@cmake_project_VERSION_PATCH@"
 
+#cmakedefine USE_LIBS
+
 #endif // CMAKE_PROJECT_H

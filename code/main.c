@@ -14,9 +14,15 @@
 
 #include "cmake-project.h"
 
+#ifdef USE_LIBS
+/* Libs includes */
+#include "mymath.h"
+
+#else
 /* Modules includes */
 #include "summation.h"
 #include "product.h"
+#endif
 
 int main(int argc, char * argv[])
 {

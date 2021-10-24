@@ -1,0 +1,1 @@
+option(USE_LIBS "Use libraries instead of modules." ON)

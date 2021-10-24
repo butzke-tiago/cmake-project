@@ -1,9 +1,20 @@
-# add all source files from src folder to variable MODULES
-aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src MODULES)
+if(NOT USE_LIBS)
+    # add all source files from src folder to variable MODULES
+    aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src MODULES)
+endif()
+
 # add main.c and MODULES to the executable
 add_executable( cmake_project
                 main.c
-                ${MODULES})
+                ${MODULES}
+                )
+
+if(USE_LIBS)
+    target_link_libraries(  cmake_project
+                            PUBLIC
+                                mymath
+                            )
+endif()
 
 # add inc to the include directories
 target_include_directories( cmake_project
@@ -23,3 +34,4 @@ target_include_directories( cmake_project
                             PUBLIC
                                 ${PROJECT_SOURCE_DIR}/inc
                             )
+                            
