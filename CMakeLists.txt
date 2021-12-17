@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
+# Handle inclusion of toolchain configuration file, as the --toolchain option seems not to work.
+if (DEFINED TOOLCHAIN)
+    include(${TOOLCHAIN})
+    set(CMAKE_CROSSCOMPILING true)
+endif()
+
 # set the project name and version
 project(cmake_project
         VERSION 0.1.0
@@ -15,7 +21,9 @@ configure_file(cmake-project.h.in ${PROJECT_SOURCE_DIR}/inc/cmake-project.h)
 
 include(options.cmake)
 
-# add code directory
+
+
+# add the code directory
 add_subdirectory(code)
 
 # add libs directory

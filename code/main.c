@@ -17,7 +17,6 @@
 #ifdef USE_LIBS
 /* Libs includes */
 #include "mymath.h"
-
 #else
 /* Modules includes */
 #include "summation.h"
