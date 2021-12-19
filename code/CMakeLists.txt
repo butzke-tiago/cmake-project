@@ -20,6 +20,7 @@ endif()
 target_link_libraries(  cmake_project
                         PUBLIC
                         ${PROJECT_SOURCE_DIR}/libs/bin/jansson/lib/libjansson.a
+                        ${PROJECT_SOURCE_DIR}/libs/bin/curl/lib/libcurl.so
                         )
 
 # add inc to the include directories
@@ -32,6 +33,7 @@ target_include_directories( cmake_project
 target_include_directories( cmake_project
                             PRIVATE
                                 ${PROJECT_SOURCE_DIR}/libs/bin/jansson/include
+                                ${PROJECT_SOURCE_DIR}/libs/bin/curl/include
                             )
                         
 # set output dir and output file name

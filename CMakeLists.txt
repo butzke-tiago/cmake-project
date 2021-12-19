@@ -32,4 +32,8 @@ if(USE_LIBS)
 endif()
 
 #add dependencies to be built before the main target
-add_dependencies(cmake_project jansson mymath)
+add_dependencies(   cmake_project
+                        curl
+                        jansson 
+                        mymath
+                    )
