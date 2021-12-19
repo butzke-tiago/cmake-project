@@ -30,3 +30,6 @@ add_subdirectory(code)
 if(USE_LIBS) 
     add_subdirectory(libs)
 endif()
+
+#add dependencies to be built before the main target
+add_dependencies(cmake_project jansson mymath)

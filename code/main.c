@@ -23,6 +23,8 @@
 #include "product.h"
 #endif
 
+#include "jansson.h"
+
 int main(int argc, char * argv[])
 {
     printf("CMake Project v%s\n", PROJECT_VERSION_STR);
@@ -32,4 +34,10 @@ int main(int argc, char * argv[])
 
     printf("A product of 1 and 2: %d\n", product(2, 1, 2));
     printf("A product of 1, 2, 3, 4: %d\n", product(4, 1, 2, 3, 4));
+    
+    printf("Jansson version is %s.\n", jansson_version_str());
+
+    json_t *json = json_pack("{s:s,s:i,s:f}", "string", "value", "int", 1, "float", 1.);
+    printf("A simple json: %s\n",json_dumps(json, JSON_COMPACT));
+    json_decref(json); 
 }

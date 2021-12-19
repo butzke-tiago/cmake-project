@@ -16,12 +16,24 @@ if(USE_LIBS)
                             )
 endif()
 
+#link jansson external project library
+target_link_libraries(  cmake_project
+                        PUBLIC
+                        ${PROJECT_SOURCE_DIR}/libs/bin/jansson/lib/libjansson.a
+                        )
+
 # add inc to the include directories
 target_include_directories( cmake_project
                             PRIVATE
                                 ${CMAKE_CURRENT_SOURCE_DIR}/inc
                             )
 
+# add jansson include directory
+target_include_directories( cmake_project
+                            PRIVATE
+                                ${PROJECT_SOURCE_DIR}/libs/bin/jansson/include
+                            )
+                        
 # set output dir and output file name
 set_target_properties(  cmake_project
                         PROPERTIES
