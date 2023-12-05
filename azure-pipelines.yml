@@ -23,7 +23,7 @@ steps:
     ls
 - task: CopyFiles@2
   inputs:
-    Contents: 'bin/*'
+    Contents: 'bin/cmake-project'
     TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
