@@ -20,3 +20,6 @@ steps:
 - task: CMake@1
   inputs:
     cmakeArgs: ..
+- task: CMake@1
+  inputs:
+    cmakeArgs: --build .
