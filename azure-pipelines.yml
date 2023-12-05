@@ -23,8 +23,9 @@ steps:
     ls
 - task: CopyFiles@2
   inputs:
-    Contents: 'bin/cmake-project'
+    Contents: 'bin/*'
     TargetFolder: '$(build.artifactstagingdirectory)'
+    flattenFolders: true
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
