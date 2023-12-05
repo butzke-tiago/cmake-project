@@ -19,6 +19,8 @@ steps:
 - task: CMake@1
   inputs:
     cmakeArgs: --build .
+- script: |
+    ls
 - task: CopyFiles@2
   inputs:
     Contents: '**\bin\**'
